@@ -12,9 +12,7 @@ export class AuthorsBanner {
 
 	init() {
 		const pageName = mw.config.get( 'wgPageName' );
-		if ( pageName.indexOf( 'Wikipedia:Wikipedia_vor_Ort' ) === -1 &&
-			pageName.indexOf( 'Aktionstag' ) === -1 &&
-			pageName !== 'Wikipedia:Wikimedia_Deutschland/LerneWikipedia' &&
+		if ( pageName !== 'Wikipedia:Wikimedia_Deutschland/DeinEngagement' &&
 			pageName !== 'Wikipedia:Spezial:Benutzerkonto_anlegen' ) {
 			this.createBanner();
 			this.registerClickEvents();
