@@ -1,7 +1,7 @@
 import { EventLoggingTracker } from './EventLoggingTracker';
 import { LocalImpressionCount } from './LocalImpressionCount';
 
-export class AuthorsBanner {
+export class OcceditorsBanner {
 
 	constructor( bannerName, bannerTemplate ) {
 		this.bannerCloseTrackRatio = 0.01;
@@ -12,7 +12,9 @@ export class AuthorsBanner {
 
 	init() {
 		const pageName = mw.config.get( 'wgPageName' );
-		if ( pageName !== 'Wikipedia:Wikimedia_Deutschland/DeinEngagement' &&
+		if ( pageName.indexOf( 'Wikipedia:Wikipedia_vor_Ort' ) === -1 &&
+			pageName.indexOf( 'Aktionstag' ) === -1 &&
+			pageName !== 'Wikipedia:Wikimedia_Deutschland/LerneWikipedia' &&
 			pageName !== 'Wikipedia:Spezial:Benutzerkonto_anlegen' ) {
 			this.createBanner();
 			this.registerClickEvents();

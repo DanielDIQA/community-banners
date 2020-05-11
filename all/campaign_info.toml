@@ -1,0 +1,21 @@
+# Authors Campaign
+[all]
+campaign_tracking = "B20WMDE_occeditors_spring_2020_3all"
+preview_link = "/wiki/Wikipedia:Hauptseite?useskin=vector&banner=B17WMDE_webpack_prototype&devbanner={{banner}}"
+wrapper_template = "wikipedia_org"
+
+[all.banners.spring]
+filename = "./all/banner.js"
+pagename = "B20WMDE_occeditors_spring_2020_3all"
+tracking = "B20WMDE_occeditors_spring_2020_3all"
+
+# Authors Campaign Mobile for easily testing mobile view
+[all_mobile]
+campaign_tracking = "B20WMDE_occeditors_spring_2020_3allm"
+preview_link = "/wiki/Wikipedia:Hauptseite?useskin=minerva&banner=B17WMDE_webpack_prototype&devbanner={{banner}}"
+wrapper_template = "wikipedia_org"
+
+[all_mobile.banners.spring]
+filename = "./all/banner_mobile.js"
+pagename = "B20WMDE_occeditors_spring_2020_3allm"
+tracking = "B20WMDE_occeditors_spring_2020_3allm"

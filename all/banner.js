@@ -1,12 +1,12 @@
 require( './css/styles.pcss' );
 
-import { AuthorsBanner } from './oceditorsBanner';
+import { OcceditorsBanner } from './OcceditorsBanner';
 
 $( document ).ready( function () {
 	const bannerName = 'B20WMDE_occeditors_spring_2020_3all';
 	const bannerTemplate = require( './templates/banner.hbs' );
 	const showbanner = true;
-	const authorsBanner = new AuthorsBanner( bannerName, bannerTemplate );
+	const occeditorsBanner = new OcceditorsBanner( bannerName, bannerTemplate );
 	/*
 	Print the banner if the current user is part of Target group A or B:
 		Target group A: eligible voters
@@ -20,7 +20,7 @@ $( document ).ready( function () {
 		(the condition below are not optimized due to readability concerns)
 	*/
 	if(showbanner != null) {
-		authorsBanner.init();
+		occeditorsBanner.init();
 	}
 	else {
 		if (mw.config.get("wgUserRegistration") != null) { //only registered users
@@ -30,7 +30,7 @@ $( document ).ready( function () {
 			if (editCount > 200 && editCount <= 1000 && daysRegistered >= 60 ||
 				editCount >= 20 && editCount < 200) {
 					//User is part of Target group A or B
-					authorsBanner.init();
+					occeditorsBanner.init();
 				}
 		}
 	}
