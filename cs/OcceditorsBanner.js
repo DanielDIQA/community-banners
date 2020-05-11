@@ -1,7 +1,7 @@
 import { EventLoggingTracker } from './EventLoggingTracker';
 import { LocalImpressionCount } from './LocalImpressionCount';
 
-export class AuthorsBanner {
+export class OcceditorsBanner {
 
 	constructor( bannerName, bannerTemplate ) {
 		this.bannerCloseTrackRatio = 0.01;
