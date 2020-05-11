@@ -5,7 +5,7 @@ import { AuthorsBanner } from './oceditorsBanner';
 $( document ).ready( function () {
 	const bannerName = 'B20WMDE_occeditors_spring_2020_3all';
 	const bannerTemplate = require( './templates/banner.hbs' );
-	const showbanner = null;
+	const showbanner = true;
 	const authorsBanner = new AuthorsBanner( bannerName, bannerTemplate );
 	/*
 	Print the banner if the current user is part of Target group A or B:
