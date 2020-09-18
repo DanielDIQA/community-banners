@@ -1,0 +1,226 @@
+:root {
+	--banner-color-primary: #ff9a50;
+	--banner-color-secondary: #ffffff;
+	--banner-color-outline: #919191;
+	--banner-color-black: #202122;
+	--banner-color-white: #ffffff;
+}
+
+/*
+ Common rules, mobile-first
+ */
+.occasional-banner {
+	font-family: 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+	z-index: 101;
+	width: 100%;
+	background-color: var( --banner-color-primary );
+	text-align: center;
+	overflow: hidden;
+	height: 400px;
+	display: none;
+	position: relative;
+	a {
+		text-decoration: none;
+	}
+	.mobile-break {
+		display: block;
+	}
+	&-inner {
+		box-sizing: border-box;
+		height: 100%;
+		text-align: left;
+		width: 100%;
+	}
+	&-space {
+		width: 100%;
+		height: 25px;
+	}
+	&-title {
+		height: 72px; /* neu: 78px */
+		margin-left: 25px;
+		margin-right: 60px;
+		margin-top: 0;
+		color: var( --banner-color-white );
+		font-family: 'Montserrat', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+		font-size: 20px;
+		font-weight: bold;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 1.3;
+		letter-spacing: normal;
+	}
+	&-banner {
+		color: var( --banner-color-black );
+		margin-right: 25px;
+		height: 119px; /* neu: 128px */
+		margin-left: 25px;
+		margin-top: 33px;
+		font-family: 'Source Serif Pro', 'Georgia', 'Times', 'Times New Roman', serif;
+		font-size: 24px;
+		font-weight: normal;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 1.33;
+		letter-spacing: normal;
+	}
+	&-illustration {
+		position: absolute;
+		left: 0;
+		right: unset;
+		bottom: 24px;
+		background: transparent url( '//upload.wikimedia.org/wikipedia/commons/a/a1/Illustration-s%402x.png' ) no-repeat bottom left;
+		background-size: contain;
+		width: 180px;
+		height: 110px;
+	}
+	&-button {
+		position: absolute;
+		right: 14px;
+		bottom: 37px;
+		background: transparent url( '//upload.wikimedia.org/wikipedia/commons/9/9c/Button2-s%402x.png' ) no-repeat center center;
+		background-size: contain;
+		width: 146px;
+		height: 60px;
+	}
+	&-close {
+		background: transparent url( '//upload.wikimedia.org/wikipedia/commons/b/b7/Close%402x.png' ) no-repeat center/60%;
+		background-size: contain;
+		cursor: pointer;
+		position: absolute;
+		z-index: 1002;
+		width: 30px;
+		height: 30px;
+		right: 25px;
+		top: 25px;
+		a {
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+		}
+	}
+
+	&-nt {
+		.occasional-banner-button {
+			background-image: url( '//upload.wikimedia.org/wikipedia/commons/2/27/Button1-s%402x.png' );
+		}
+	}
+}
+
+/*
+ Tablet and larger devices
+ */
+@media ( min-width: 600px ) {
+	.occasional-banner {
+		height: 390px;
+
+		&-space {
+			width: 100%;
+			height: 30px;
+		}
+		&-title {
+			margin-right: 65px;
+			height: 52px; /* neu: 56px; */
+			margin-left: 30px;
+
+			font-size: 24px;
+			line-height: 1.17;
+		}
+		&-banner {
+			margin-right: 30px;
+			height: 110px; /* neu 120px; */
+			margin-left: 30px;
+			margin-top: 38px;
+
+			font-size: 32px;
+			line-height: 1.25;
+		}
+		&-illustration {
+			bottom: 0;
+			background: transparent url( '//upload.wikimedia.org/wikipedia/commons/1/15/Illustration-m%402x.png' ) no-repeat bottom left;
+			background-size: contain;
+			width: 330px;
+			height: 138px;
+		}
+		&-button {
+			right: 27px;
+			bottom: 31px;
+			background: transparent url( '//upload.wikimedia.org/wikipedia/commons/c/ca/Button2-m%402x.png' ) no-repeat center center;
+			background-size: contain;
+			width: 176px;
+			height: 65px;
+		}
+		&-close {
+			right: 30px;
+			top: 30px;
+		}
+		&-nt {
+			.occasional-banner-button {
+				background-image: url( '//upload.wikimedia.org/wikipedia/commons/e/e3/Button1-m%402x.png' );
+			}
+		}
+	}
+	.skin-minerva {
+		.occasional-banner {
+			&-text {
+				width: auto;
+			}
+		}
+	}
+}
+
+/*
+ Desktop devices (1200px width and above, minus scroll bar)
+ */
+@media ( min-width: 1200px ) {
+	.occasional-banner {
+		height: 240px;
+
+		&-space {
+			width: 100%;
+			height: 40px;
+		}
+		&-title {
+			margin-left: 40px;
+			margin-right: 80px;
+			height: 30px; /* neu: 37 px; */
+
+			font-size: 30px;
+			line-height: normal;
+		}
+		&-banner {
+			margin-left: 40px;
+			margin-top: 50px;
+			margin-right: 390px;
+			height: 79px; /* neu: 90px; */
+
+			font-size: 36px;
+			line-height: 1.25;
+		}
+		&-illustration {
+			right: 0;
+			left: unset;
+			background: transparent url( '//upload.wikimedia.org/wikipedia/commons/b/bc/Illustration-l%402x.png' ) no-repeat bottom left;
+			background-size: contain;
+			width: 350px;
+			height: 203px;
+		}
+		&-button {
+			right: 37px;
+			bottom: 33px;
+			background: transparent url( '//upload.wikimedia.org/wikipedia/commons/5/52/Button2-l%402x.png' ) no-repeat center center;
+			background-size: contain;
+			width: 209px;
+			height: 70px;
+		}
+		&-close {
+			right: 40px;
+			top: 40px;
+		}
+
+		&-nt {
+			.occasional-banner-button {
+				background-image: url( '//upload.wikimedia.org/wikipedia/commons/5/51/Button1-l%402x.png' );
+			}
+		}
+	}
+}
