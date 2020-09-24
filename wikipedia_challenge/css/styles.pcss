@@ -25,7 +25,8 @@
     	
 	text-align: center;
 	overflow: hidden;
-	height: 350px;
+	/*height: 350px;*/
+	
 	.mobile-break {
 		display: block;
 	}
@@ -47,29 +48,29 @@
 	}
 	
 	&-title {
-		margin-left: 25px;
-		margin-right: 60px;
-		margin-top: 0;
+		margin-left: 7.8%; 
+		margin-right: 70px;
+		margin-top: 21px;
 		color: var( --banner-color-white );
 		font-family: 'Montserrat', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
-		font-size: 20px;
+		font-size: 6.25vw; 
 		font-weight: 700;
 		font-stretch: normal;
 		font-style: normal;
-		line-height: 24px;
+		line-height: 120%;
 		letter-spacing: normal;
 	}
 	&-banner {
 		color: var( --banner-color-white );
 		width: 77%;
-		margin-left: 25px;
+		margin-left: 7.8%; 
 		margin-top: 25px;
 		font-family: 'Source Serif Pro Regular', 'Georgia', 'Times', 'Times New Roman', serif;
-		font-size: 24px;
+		font-size: 7.5vw; 
 		font-weight: normal;
 		font-stretch: normal;
 		font-style: normal;
-		line-height: 32px;
+		line-height: 120%;
 		letter-spacing: normal;
 		
 		&-highlight {
@@ -78,13 +79,23 @@
 		
 	}
 	&-button {
-		position: absolute;
-		right: 14px;
-		bottom: 27px;
-		background: transparent url( '//upload.wikimedia.org/wikipedia/commons/a/a4/Button_320x350.png' ) no-repeat center center;
-		background-size: cover;
-		width: 205px;
-		height: 48px;
+		font-family: 'Montserrat', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+		/*font-size: 20px;*/
+		font-weight: bold;
+		font-stretch: normal;
+		font-style: normal;
+		background-color: var( --banner-color-white );
+		color: var( --banner-color-black );
+		padding-top: 5px;
+		padding-bottom: 5px;
+		text-align: center;
+		min-width: 64%;
+		font-size: 6.25vw; 
+		position: static;
+		float: right;
+		margin-right: 14px;
+		margin-top: 29px;
+		margin-bottom: 27px;
 	}
 	&-close {
 		background: transparent url( '//upload.wikimedia.org/wikipedia/commons/1/1e/Close_Button.png' ) no-repeat center/60%;
@@ -111,13 +122,31 @@
 }
 
 /*
+ Set a maximum font size
+ */
+@media ( min-width: 480px ) and ( max-width: 599px ) {
+	.challenge-banner {
+		&-title {
+			font-size: 30px;
+		}
+		&-banner {
+			font-size: 40px;
+		}
+		&-button {
+			font-size: 30px;
+		}
+	}
+}
+
+
+/*
  Tablet and larger devices
  */
 @media ( min-width: 600px ) {
 	.challenge-banner {
-		height: 335px;
+		/*height: 335px;*/
 		.mobile-height {
-			height: 335px;
+			/*height: 335px;*/
 		}
 		background-image: url( '//upload.wikimedia.org/wikipedia/commons/a/a3/30_Tage_Wiki_Banner_600x335_Backgroundpic.jpg' );
 	
@@ -126,24 +155,32 @@
 			height: 37px;
 		}
 		&-title {
-			margin-right: 65px;
-			margin-left: 33px;
-			font-size: 24px;
-			line-height: 28px;
+			margin-right: 11%; /*65px;*/
+			margin-left: 5.5%; /*33px;*/
+			margin-top: 39px;
+			font-size: 5vw; /*30px/600px;*/ /* orig 24px; */
+			line-height: 120%;
 		}
 		&-banner {
-			margin-left: 33px;
+			margin-left: 5.5%; /*33px;*/
 			margin-top: 35px;
-			font-size: 32px;
-			line-height: 45px;
+			font-size: 6.6vw; /* 40px / 335px */ /* orig 32px; */
+			line-height: 120%; /*45px;*/
+			width: 90%;
 		}
 		&-button {
-			right: 30px;
-			bottom: 44px;
-			background: transparent url( '//upload.wikimedia.org/wikipedia/commons/3/3c/Button_600x335.png' ) no-repeat center center;
-			background-size: cover;
-			width: 220px;
-			height: 54px;
+			/*right: 30px;
+			bottom: 15px;*/
+			margin-bottom: 28px;
+			/*background: transparent url( '//upload.wikimedia.org/wikipedia/commons/3/3c/Button_600x335.png' ) no-repeat center center;
+			background-size: cover;*/
+			font-size: 5vw; /*30px / 600px */
+			min-width: 33%; /*280px / 600px; */ /*220px;*/
+			/*height: 54px;*/
+			position: static;
+			float: right;
+			margin-right: 30px;
+			margin-top: unset;
 		}
 		&-close {
 			right: 30px;
@@ -165,38 +202,68 @@
 }
 
 /*
- Desktop devices (1200px width and above, minus scroll bar)
+ Set a maximum font size
  */
+@media ( min-width: 620px ) and ( max-width: 1199px ) {
+	.challenge-banner {
+		&-title {
+			font-size: 30px;
+		}
+		&-banner {
+			font-size: 40px;
+		}
+		&-button {
+			font-size: 35px;
+		}
+	}
+}
+/*
+ Extrawunsch: überlappung von banner-text und button => button nach unten verschieben
+ */
+@media ( min-width: 741px ) and ( max-width: 929px ) {
+	.challenge-banner {
+		&-button {
+			margin-top: 29px;
+		}
+	}
+}
+ 
 @media ( min-width: 1200px ) {
 	.challenge-banner {
-		height: 240px;
+		/*height: 240px;*/
 		background-image: url( '//upload.wikimedia.org/wikipedia/commons/5/5d/30_Tage_Wiki_Banner_1200x240_Backroundpic.jpg' );
 	
 		&-space {
 			width: 100%;
-			height: 32px;
+			height: 13%;
 		}
 		&-title {
-			margin-left: 60px;
-			margin-right: 80px;
-			font-size: 30px;
-			line-height: 37px;
+			margin-top: 32px;
+			margin-left: 5.5%; /*60px;*/
+			margin-right: 34.8%; /*80px;*/
+			font-size: 2.5vw; /*30px / 1200px;*/
+			
 		}
 		&-banner {
-			margin-left: 60px;
-			margin-top: 27px;
+			margin-left: 5.5%; /*60px;*/
+			margin-top: 24px;
+			margin-bottom: 36px;
 			width: 66%;
-			font-size: 45px;
-			line-height: 54px;
+			font-size: 3.3vw; /* 40px / 1200px;*/
+			
 		}
 		&-button {
 			right: 60px;
 			bottom: 36px;
-			background: transparent url( '//upload.wikimedia.org/wikipedia/commons/b/b5/Button_1200x240.png' ) no-repeat center center;
-			background-size: cover;
-			width: 300px;
-			height: 60px;
+			min-width: 25%; /*280px;*/
+			font-size: 2.5vw;/*22px;*/
+			position: absolute;
+			margin-bottom: unset;
+			margin-right: unset;
+			margin-top: unset;
+			float: unset;
 		}
+		
 		&-close {
 			right: 60px;
 			top: 32px;
@@ -206,6 +273,19 @@
 			.challenge-banner-button {
 				background-image: url( '//upload.wikimedia.org/wikipedia/commons/5/51/Button1-l%402x.png' );
 			}
+		}
+	}
+}
+@media ( min-width: 1400px ) {
+	.challenge-banner {
+		&-title {
+			font-size: 35px;
+		}
+		&-banner {
+			font-size: 46px;
+		}
+		&-button {
+			font-size: 35px;
 		}
 	}
 }

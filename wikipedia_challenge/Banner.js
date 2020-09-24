@@ -48,6 +48,7 @@ export class Banner {
 		if ( this.shouldShowBanner() ) {
 			this.createBanner();
 			this.registerClickEvents();
+			this.registerResizeEvents();
 			this.eventLoggingTracker.trackSeenEvent( BANNER_SEEN_TRACK_RATIO );
 		} else {
 			mw.centralNotice.setBannerLoadedButHidden();
@@ -76,8 +77,7 @@ export class Banner {
 		this.bannerContainer.innerHTML = this.template( this.templateVars );
 
 		this.getHTMLElements();
-
-		
+	
 
 		document.body.prepend( document.getElementById( CENTRAL_NOTICE_ID ) );
 		this.banner.style.display = 'block';
@@ -85,7 +85,15 @@ export class Banner {
 
 		this.addBannerSpace( this.banner );
 	}
-
+	registerResizeEvents() {
+		var banner = this;
+		window.onresize = function() {
+			//resize the mediawiki-elements
+			banner.addBannerSpace( banner.banner );
+			
+			
+		}
+	}
 	registerClickEvents() {
 		this.eventLoggingTracker.bindClickEvent( this.closeButton, 'banner-closed', BANNER_CLOSE_TRACK_RATIO );
 		this.eventLoggingTracker.bindClickEvent( this.linkButton, 'banner-clicked', BANNER_CLOSE_TRACK_RATIO );

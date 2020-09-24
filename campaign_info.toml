@@ -24,6 +24,10 @@ filename = "./wikipedia_challenge/banner_var.js"
 pagename = "B20WMDE_challengebnr_fall2020_var_m"
 tracking = "WMDE_challengebnr_fall2020_var_m"
 
+[challenge_mobile.banners.ctrl]
+filename = "./wikipedia_challenge/banner_ctrl.js"
+pagename = "B20WMDE_challengebnr_fall2020_ctrl_m"
+tracking = "WMDE_challengebnr_fall2020_ctrl_m"
 
 # Occasional Editors Campaign
 [occasional]
