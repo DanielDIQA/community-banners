@@ -1,0 +1,55 @@
+{
+  "name": "community-banners-webpack",
+  "version": "1.0.0",
+  "description": "Building WMDE banners with webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'This package has no tests'",
+    "watch": "webpack --watch",
+    "build": "webpack --config webpack.production.js",
+    "start": "webpack-dev-server --disable-host-check --host 0.0.0.0",
+    "clean": "rm dist/*.js dist/*.wikitext",
+    "lint:js": "eslint --cache --cache-location .eslintcache --ignore-path .gitignore .",
+    "lint:css": "stylelint --syntax scss '**/*.pcss'"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "repository": "https://github.com/wmde/community-banners",
+  "dependencies": {
+    "babel-eslint": "^10.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-object-assign": "^7.8.3",
+    "@babel/preset-env": "^7.9.0",
+    "autoprefixer": "^7.2.6",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.5.3",
+    "eslint": "^4.19.1",
+    "eslint-config-wikimedia": "^0.5.0",
+    "handlebars": "^4.3.0",
+    "handlebars-loader": "^1.7.0",
+    "html-loader": "^0.4.5",
+    "jquery": "^3.5.0",
+    "minimatch": "^3.0.4",
+    "postcss-custom-properties": "^7.0.0",
+    "postcss-loader": "^2.1.4",
+    "postcss-nested": "^2.1.2",
+    "style-loader": "^0.18.2",
+    "stylelint": "^13.3.3",
+    "stylelint-config-wikimedia": "^0.4.3",
+    "toml": "^2.3.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "url": "^0.11.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.1.2"
+  },
+  "browserslist": [
+    "ie 10",
+    "last 2 versions",
+    "> 1%"
+  ]
+}
