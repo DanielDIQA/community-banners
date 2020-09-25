@@ -25,7 +25,6 @@
     	
 	text-align: center;
 	overflow: hidden;
-	/*height: 350px;*/
 	
 	.mobile-break {
 		display: block;
@@ -80,7 +79,6 @@
 	}
 	&-button {
 		font-family: 'Montserrat', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
-		/*font-size: 20px;*/
 		font-weight: bold;
 		font-stretch: normal;
 		font-style: normal;
@@ -89,13 +87,15 @@
 		padding-top: 5px;
 		padding-bottom: 5px;
 		text-align: center;
-		min-width: 64%;
-		font-size: 6.25vw; 
+		font-size: 6vw; 
 		position: static;
 		float: right;
 		margin-right: 14px;
 		margin-top: 29px;
 		margin-bottom: 27px;
+		margin-left: unset;
+		min-width: 280px;
+		width: 50%;
 	}
 	&-close {
 		background: transparent url( '//upload.wikimedia.org/wikipedia/commons/1/1e/Close_Button.png' ) no-repeat center/60%;
@@ -117,6 +117,19 @@
 	&-nt {
 		.challenge-banner-button {
 			background-image: url( '//upload.wikimedia.org/wikipedia/commons/2/27/Button1-s%402x.png' );
+		}
+	}
+}
+
+
+@media ( max-width: 319px ) {
+	.challenge-banner {
+		&-button {
+			float: unset;
+			margin-left: 7.8%;
+			margin-right: 14px;
+			min-width: unset;
+			width: unset;
 		}
 	}
 }
@@ -144,39 +157,33 @@
  */
 @media ( min-width: 600px ) {
 	.challenge-banner {
-		/*height: 335px;*/
 		.mobile-height {
-			/*height: 335px;*/
 		}
 		background-image: url( '//upload.wikimedia.org/wikipedia/commons/a/a3/30_Tage_Wiki_Banner_600x335_Backgroundpic.jpg' );
 	
 		&-space {
 			width: 100%;
-			height: 37px;
+			height: 37px; 
 		}
 		&-title {
-			margin-right: 11%; /*65px;*/
-			margin-left: 5.5%; /*33px;*/
+			margin-right: 11%; 
+			margin-left: 5.5%; 
 			margin-top: 39px;
-			font-size: 5vw; /*30px/600px;*/ /* orig 24px; */
+			font-size: 5vw; 
 			line-height: 120%;
 		}
 		&-banner {
-			margin-left: 5.5%; /*33px;*/
+			margin-left: 5.5%; 
 			margin-top: 35px;
-			font-size: 6.6vw; /* 40px / 335px */ /* orig 32px; */
-			line-height: 120%; /*45px;*/
+			font-size: 6.6vw; 
+			line-height: 120%; 
 			width: 90%;
 		}
 		&-button {
-			/*right: 30px;
-			bottom: 15px;*/
 			margin-bottom: 28px;
-			/*background: transparent url( '//upload.wikimedia.org/wikipedia/commons/3/3c/Button_600x335.png' ) no-repeat center center;
-			background-size: cover;*/
-			font-size: 5vw; /*30px / 600px */
-			min-width: 33%; /*280px / 600px; */ /*220px;*/
-			/*height: 54px;*/
+			font-size: 4.8vw; 
+			width: 33%; 
+			max-width: 300px;
 			position: static;
 			float: right;
 			margin-right: 30px;
@@ -200,7 +207,28 @@
 		}
 	}
 }
-
+/*
+ add space between text and button when overlapping
+ */
+@media ( min-width: 741px ) and ( max-width: 929px ) {
+	.challenge-banner {
+		&-button {
+			margin-top: 29px;
+		}
+	}
+}
+/*
+* Special treatment for Firefox: the width includes the toolbar
+*/
+@supports ( -moz-user-select:unset ) {
+	@media ( min-width: 930px ) and ( max-width: 946px ) {
+		.challenge-banner {
+			&-button {
+				margin-top: 29px;
+			}
+		}
+	}
+}
 /*
  Set a maximum font size
  */
@@ -213,24 +241,14 @@
 			font-size: 40px;
 		}
 		&-button {
-			font-size: 35px;
+			font-size: 30px;
 		}
 	}
 }
-/*
- Extrawunsch: überlappung von banner-text und button => button nach unten verschieben
- */
-@media ( min-width: 741px ) and ( max-width: 929px ) {
-	.challenge-banner {
-		&-button {
-			margin-top: 29px;
-		}
-	}
-}
+
  
 @media ( min-width: 1200px ) {
 	.challenge-banner {
-		/*height: 240px;*/
 		background-image: url( '//upload.wikimedia.org/wikipedia/commons/5/5d/30_Tage_Wiki_Banner_1200x240_Backroundpic.jpg' );
 	
 		&-space {
@@ -239,24 +257,26 @@
 		}
 		&-title {
 			margin-top: 32px;
-			margin-left: 5.5%; /*60px;*/
-			margin-right: 34.8%; /*80px;*/
-			font-size: 2.5vw; /*30px / 1200px;*/
+			margin-left: 5.5%; 
+			margin-right: 34.8%; 
+			font-size: 2.5vw; 
 			
 		}
 		&-banner {
-			margin-left: 5.5%; /*60px;*/
+			margin-left: 5.5%; 
 			margin-top: 24px;
 			margin-bottom: 36px;
 			width: 66%;
-			font-size: 3.3vw; /* 40px / 1200px;*/
+			font-size: 3.3vw; 
 			
 		}
 		&-button {
 			right: 60px;
 			bottom: 36px;
-			min-width: 25%; /*280px;*/
-			font-size: 2.5vw;/*22px;*/
+			width: 25%;
+			max-width: 360px;
+			min-width: unset;
+			font-size: 2.5vw;
 			position: absolute;
 			margin-bottom: unset;
 			margin-right: unset;
