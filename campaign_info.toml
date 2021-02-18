@@ -1,3 +1,34 @@
+# Wikipedia-Aktionswoche
+[aktionswoche]
+campaign_tracking = "WMDE_neweditors_autumn_2019"
+preview_link = "/wiki/Wikipedia:Hauptseite?useskin=vector&banner=B17WMDE_webpack_prototype&devbanner={{banner}}"
+wrapper_template = "wikipedia_org"
+
+[aktionswoche.banners.ctrl]
+filename = "./wikipedia_aktionswoche/banner_ctrl.js"
+pagename = "B20WMDE_aktionswochebnr_fall2020_ctrl"
+tracking = "WMDE_aktionswochebnr_fall2020_ctrl"
+
+[aktionswoche.banners.var]
+filename = "./wikipedia_aktionswoche/banner_var.js"
+pagename = "B20WMDE_aktionswochebnr_fall2020_var"
+tracking = "WMDE_aktionswochebnr_fall2020_var"
+
+[aktionswoche_mobile]
+campaign_tracking = "WMDE_neweditors_autumn_2019_m"
+preview_link = "/wiki/Wikipedia:Hauptseite?useskin=Minerva&banner=B17WMDE_webpack_prototype&devbanner={{banner}}"
+wrapper_template = "wikipedia_org"
+
+[aktionswoche_mobile.banners.var]
+filename = "./wikipedia_aktionswoche/banner_var.js"
+pagename = "B20WMDE_aktionswochebnr_fall2020_var_m"
+tracking = "WMDE_aktionswochebnr_fall2020_var_m"
+
+[aktionswoche_mobile.banners.ctrl]
+filename = "./wikipedia_aktionswoche/banner_ctrl.js"
+pagename = "B20WMDE_aktionswochebnr_fall2020_ctrl_m"
+tracking = "WMDE_aktionswochebnr_fall2020_ctrl_m"
+
 # Wikipedia-Challenge
 [challenge]
 campaign_tracking = "WMDE_neweditors_autumn_2019"
