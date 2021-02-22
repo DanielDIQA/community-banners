@@ -9,7 +9,7 @@ const BANNER_CLASS_PREFIX = 'aktionswoche-banner-';
 const BANNER_TITLE = '#WikipediaSchreibtGeschichte';
 const BANNER_SUBTITLE = 'Jetzt! Große Aktionswoche zum <nobr>Wikipedia-Geburtstag</nobr>';
 const BANNER_BUTTON_TEXT = '&nbsp;Schau&nbsp;vorbei&nbsp;';
-const BANNER_ILLUSTRATION_URL = '//upload.wikimedia.org/wikipedia/commons/1/11/Hand_wp20.png';
+const BANNER_ILLUSTRATION_URL = '//upload.wikimedia.org/wikipedia/commons/2/26/Cake-actionweek1.png';
 const BANNER_TITLE_COLOR = '#ffffff'; // white for ctrl
 const BANNER_BACKGROUND_COLOR = '#ee8019'; // orange
 
